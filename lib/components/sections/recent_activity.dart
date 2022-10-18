@@ -32,7 +32,7 @@ class _RecentActivityContent extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 4),
                   child: ColorDot(
-                    color: ThemeColors.recenActivity['spent'],
+                    color: ThemeColors.recentActivity['spent'],
                   ),
                 ),
                 Column(
@@ -52,7 +52,7 @@ class _RecentActivityContent extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 4),
                   child: ColorDot(
-                    color: ThemeColors.recenActivity['income'],
+                    color: ThemeColors.recentActivity['income'],
                   ),
                 ),
                 Column(
