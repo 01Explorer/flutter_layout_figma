@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_figma/themes/theme_colors.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -6,15 +7,11 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: <Color>[
-            Color.fromRGBO(103, 99, 234, 1),
-            Color.fromRGBO(155, 105, 254, 1),
-            Color.fromRGBO(195, 107, 255, 1),
-          ],
+          colors: ThemeColors.headerGradient,
         ),
         borderRadius: BorderRadius.vertical(
           bottom: Radius.circular(10),
@@ -31,22 +28,16 @@ class Header extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: '\$',
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
                     children: <TextSpan>[
                       TextSpan(
-                          text: '1000.00',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 28,
-                          )),
+                        text: '1000.00',
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
                     ],
                   ),
                 ),
                 const Text(
                   'Balanço disponível',
-                  style: TextStyle(fontSize: 16),
                 )
               ],
             ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_figma/components/box_card.dart';
+import 'package:flutter_layout_figma/components/content_division.dart';
 import 'package:flutter_layout_figma/components/sections/header.dart';
+import 'package:flutter_layout_figma/components/sections/recent_activity.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class Home extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Header(),
+          RecentActivity(),
         ],
       ),
     );
